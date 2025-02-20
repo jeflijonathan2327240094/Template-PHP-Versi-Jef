@@ -1,0 +1,12 @@
+# RewriteEngine On
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ main.php?url=$1 [L,QSA]
+RewriteEngine On
+RewriteBase /first-php/
+# RewriteBase /FIRST-PHP/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ route.php?url=$1 [L,QSA]
+
